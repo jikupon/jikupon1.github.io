@@ -26,27 +26,21 @@
     bye
     </pre></p>
 
-    
-    <h2>Formulir Kontak</h2>
-    <form action="/proses-data" method="post">
-        <input type="submit" value="Kirim">
-    </form>
 
-    <h2>Data Pengguna</h2>
-    <table border="1">
-        <tr>
-            <th>Nama</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>ewjvnwne</td>
-            <td>ewnvnwv</td>
-        </tr>
-        <tr>
-            <td>vweknw</td>
-            <td>wvnwejnwe</td>
-        </tr>
-    </table>
+    <div id="comment-section">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;Komentar</h2>
+        <form id="comment-form">
+            <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;Nama:</label>
+            <input type="text" id="name" required>
+            <br>
+            <label for="comment">&nbsp;&nbsp;&nbsp;&nbsp;Komentar:</label>
+            <textarea id="comment" required></textarea>
+            <br>
+            <button type="button" onclick="addComment()">Tambah Komentar</button>
+        </form>
+
+        <ul id="comment-list"></ul>
+    </div>
     </div>
     <nav class="navbar">
 
@@ -60,7 +54,7 @@
 
             <li><a href="#web-design">Desain Web</a></li>
 
-            <li><a href="./desain.html">Pengembangan Web</a></li>
+            <li><a href="jikupon1.github.io/desain.html">Pengembangan Web</a></li>
 
             <li><a href="#seo">SEO</a></li>
             
@@ -69,6 +63,29 @@
         </ul>
 
     </nav>
+
+    <script>
+        function addComment() {
+            var name = document.getElementById("name").value;
+            var commentText = document.getElementById("comment").value;
+
+            if (name && commentText) {
+                var commentList = document.getElementById("comment-list");
+
+                var newComment = document.createElement("li");
+                newComment.className = "comment";
+                newComment.innerHTML = `<strong>${name}:</strong> ${commentText}`;
+
+                commentList.appendChild(newComment);
+
+                // Clear input fields
+                document.getElementById("name").value = "";
+                document.getElementById("comment").value = "";
+            } else {
+                alert("Nama dan Komentar harus diisi!");
+            }
+        }
+    </script>
     <!--<div class="papanatas"></div>-->
 
 
