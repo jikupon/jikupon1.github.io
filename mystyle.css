@@ -45,10 +45,6 @@
        .navbar li {
 
         float: left;
-       /* background-attachment:fixed;
-        position: fixed;
-        display: inline;*/
-
         }
 
         .navbar a {
@@ -58,21 +54,11 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-       /* background-attachment:fixed;
-        position: fixed;*/
-
         }
 
         .navbar a:hover {
 
         background-color: #111;
-       /* background-attachment:fixed;
-        position: fixed;*/
-
-       /* background-color: #555;
-        position: fixed;
-        top:-15px;*/
-
         }
 
         h1 {
@@ -105,5 +91,34 @@
         }
         one {
         word-spacing: 20px;
+        }
+        #comment-section {
+            margin-top: 20px;
+            text-align: left;
+            left: 5px;
+            top: 20px;
+
+        }
+
+        #comment-list {
+            list-style-type: none;
+            padding: 0;
+            left: 5px;
+            top: 20px;
+        }
+
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            left: 5px;
+            top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: cyan;
+            margin-left: 15px;
         }
     
