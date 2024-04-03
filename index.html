@@ -1,91 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="mystyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find in Page</title>
+  <script type="text/javascript">
+    var win = window;
+    var n = 0;
+    
+    function findInPage(str) {
+      var txt, i, found;
+      if (str == "")
+        return false;
+      if (win.find) {
+        if (!win.find(str))
+          while (win.find(str, false, true))
+            n++;
+        else
+          n++;
+        if (n == 0)
+          alert("Not found.");
+      }
+      else if (win.document.body.createTextRange) {
+        txt = win.document.body.createTextRange();
+        for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+          txt.moveStart("character", 1);
+          txt.moveEnd("textedit");
+        }
+        if (found) {
+          txt.moveStart("character", -1);
+          txt.findText(str);
+          txt.select();
+          txt.scrollIntoView();
+          n++;
+        }
+        else {
+          if (n > 0) {
+            n = 0;
+            findInPage(str);
+          }
+          else
+            alert("Sorry, we couldn't find. Try again");
+        }
+      }
+      return false;
+    }
+  </script>
 </head>
 <body>
-
-    <h1></h1>
-    <h1></h1>
-    
-    <h1>  <br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sebuah trobosan baru </br></h1>
-    <div class="kotak">
-
-    <p><pre> 
-        Hai saya juga tidak tau mengapa halaman ini ada dikarenakan saya juga tidak tau
-    oke kali ini kita akan berbicara sesuatu,nggak jadi. kadang kita ingin merasakan apa 
-    tidak pernah kita dapatkan sebelumnya sekarang kita bisa mendapatkannya dengan
-    menggunakan alat yang bernama saya pun tidak tau. jika anda melihat kata kata 
-    seperti tadi kemungkinan itu adalah sebuah kebohongan. karena kata kata tadi lebih 
-    tepat jika di sebut sebuah kalimat
-
-        *note = maaf jika laman ini tidak terlalu bagus karena saya baru belajar 2 hari
-    bye
-    </pre></p>
-
-
-    <div id="comment-section">
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;Komentar</h2>
-        <form id="comment-form">
-            <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;Nama:</label>
-            <input type="text" id="name" required>
-            <br>
-            <label for="comment">&nbsp;&nbsp;&nbsp;&nbsp;Komentar:</label>
-            <textarea id="comment" required></textarea>
-            <br>
-            <button type="button" onclick="addComment()">Tambah Komentar</button>
-        </form>
-
-        <ul id="comment-list"></ul>
-    </div>
-    </div>
-    <nav class="navbar">
-
-        <ul>
-
-            <li><a href="#home">Beranda</a></li>
-
-            <li><a href="#about">Tentang</a></li>
-
-            <li><a href="#services">Layanan &#9662;</a></li>
-
-            <li><a href="#web-design">Desain Web</a></li>
-
-            <li><a href="./desain.html">Pengembangan Web</a></li>
-            
-            <li><a href="#contact">Kontak</a></li>
-
-        </ul>
-
-    </nav>
-
-    <script>
-        function addComment() {
-            var name = document.getElementById("name").value;
-            var commentText = document.getElementById("comment").value;
-
-            if (name && commentText) {
-                var commentList = document.getElementById("comment-list");
-
-                var newComment = document.createElement("li");
-                newComment.className = "comment";
-                newComment.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-
-                commentList.appendChild(newComment);
-
-                // Clear input fields
-                document.getElementById("name").value = "";
-                document.getElementById("comment").value = "";
-            } else {
-                alert("Nama dan Komentar harus diisi!");
-            }
-        }
-    </script>
-    <!--<div class="papanatas"></div>-->
-
-
+  <input type="text" id="searchText">
+  <button onclick="findInPage(document.getElementById('searchText').value)">Search</button>
 </body>
 </html>
