@@ -1,305 +1,250 @@
 <!DOCTYPE html>
-<html lang="id" dir="ltr" style="--newtab-background-color: rgb(43, 42, 51); --newtab-background-color-secondary: rgba(66, 65, 77, 1); --newtab-text-primary-color: rgba(251, 251, 254, 1); --in-content-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%); --lwt-sidebar-background-color: rgb(56, 56, 61); --lwt-sidebar-text-color: rgba(249, 249, 250, 1);" lwt-newtab="true" lwt-newtab-brighttext="" lwt-sidebar="dark"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
-    <meta name="color-scheme" content="light dark">
-    <title data-l10n-id="newtab-page-title">Tab Baru</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png">
-    <link rel="localization" href="branding/brand.ftl">
-    <link rel="localization" href="toolkit/branding/brandings.ftl">
-    <link rel="localization" href="browser/newtab/newtab.ftl">
-    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
-    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css">
-    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css">
-  </head>
-  <body class="activity-stream" style="--newtab-search-icon: url(chrome://global/skin/icons/search-glass.svg);">
-    <div id="root"><div><span><button class="icon icon-settings personalize-button personalize-animate-appear-done personalize-animate-enter-done" data-l10n-id="newtab-personalize-icon-label" title="Personalisasikan tab baru" aria-label="Personalisasikan tab baru"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label" aria-label="Personalisasikan"><button class="close-button" data-l10n-id="newtab-custom-close-button">Tutup</button><div></div><div class="home-section"><div id="shortcuts-section" class="section"><moz-toggle id="shortcuts-toggle" pressed="" data-preference="feeds.topsites" data-eventsource="TOP_SITES" data-l10n-id="newtab-custom-shortcuts-toggle" data-l10n-attrs="label, description" label="Pintasan" description="Situs yang Anda simpan atau kunjungi"></moz-toggle><div><div class="more-info-top-wrapper"><div class="more-information" style="margin-top: 0px;"><select id="row-selector" class="selector" name="row-count" data-preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}">1 baris</option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}" selected="selected">2 baris</option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}">3 baris</option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}">4 baris</option></select></div></div></div></div><div id="recent-section" class="section"><label class="switch"><moz-toggle id="highlights-toggle" data-preference="feeds.section.highlights" data-eventsource="HIGHLIGHTS" data-l10n-id="newtab-custom-recent-toggle" data-l10n-attrs="label, description" label="Aktivitas terbaru" description="Pilihan situs dan konten terbaru"></moz-toggle></label></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings">Kelola pengaturan lainnya</button></div></div></div></span><div class="outer-wrapper ds-outer-wrapper-breakpoint-override visible-logo"><main><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" tabindex="-1" data-l10n-id="newtab-search-box-input" aria-label="Cari di web"><div class="fake-textbox" data-l10n-id="newtab-search-box-text">Cari di Web</div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility: hidden;"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites">Situs Teratas</span></span><span class="learn-more-link-wrapper"></span></h3></div>
-      <div class="ruang"><div class="container-navbar">
-        <ul class="ul-navbar">
-            <li class="linavbar">
-                <h3 class="h3navbar"> WELCOME</h3>
-            </li>
-            <li class="li-navbar">
-                <a class="anavbar" href="index.php">HOME</a>
-            </li>
-            <li class="li-navbar">
-                <a class="anavbar" href="sign_in.php">SIGN IN</a>
-            </li>
-            <li class="li-navbar">
-                <a class="anavbar" href="sign_up.php">SIGN UP</a>
-            </li>
-        </ul>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Photobooth ITB 2026</title>
+<!-- <script src="script.js"></script> -->
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(180deg,#e6f7f3,#cdeee6);
+  font-family:system-ui,Arial,sans-serif;
+}
+.app{text-align:center}
+.controls{margin-bottom:12px}
+button,select{
+  padding:8px 14px;
+  border:none;
+  border-radius:8px;
+  background:#2b7a78;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+}
+button:disabled{opacity:.5}
+
+.frame{
+  position:relative;
+  width:360px;
+  aspect-ratio:540/1620;
+  background:url("frame.png") no-repeat center/contain;
+}
+
+/* SLOT FOTO */
+.slot{
+  position:absolute;
+  left:6%;
+  width:88%;
+  height:18.9%;
+  overflow:hidden;
+  border-radius:18px;
+}
+#slot1{top:22.3%}
+#slot2{top:49.3%}
+#slot3{top:76.3%}
+
+video,canvas{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+canvas{display:none}
+
+.count{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:56px;
+  color:white;
+  text-shadow:0 0 20px black;
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+  <div class="controls">
+    <select id="delay">
+      <option value="3000">3 detik</option>
+      <option value="4000">4 detik</option>
+      <option value="5000">5 detik</option>
+    </select>
+    <button id="start">START</button>
+    <button id="download" disabled>DOWNLOAD</button>
+    <button id="reset">RESET</button>
+  </div>
+
+  <div class="frame" id="frame">
+    <div class="slot" id="slot1">
+      <video autoplay muted playsinline></video>
+      <canvas></canvas>
+      <div class="count"></div>
     </div>
-    <div>
-        <!--<ul class="content">
-            <img src="image.png" alt="inustorvald" class="gambar" width="100%" height="100%">
-            <button class="login"></button>
-        </ul>     -->
+    <div class="slot" id="slot2">
+      <video autoplay muted playsinline></video>
+      <canvas></canvas>
+      <div class="count"></div>
+    </div>
+    <div class="slot" id="slot3">
+      <video autoplay muted playsinline></video>
+      <canvas></canvas>
+      <div class="count"></div>
     </div>
   </div>
 
-      <script async="" type="module" src="chrome://global/content/elements/moz-toggle.mjs"></script>
-  
+</div>
 
-</body></html>
-        <style>
-            ﻿*,
-html{
-    padding: 0;
-    margin: 0;
-}
-body{
-  background-image: url(image.png);
-  background-size: cover;
-}
-.penting{
-  width: 100%;
-  background-color: #111;
-  padding-top: 50px;
-}
-.content{
-  position: fixed;
-  z-index: -2;
-  /*background-image: url(image/linustorvald.png);*/
-}
-.sidenav{
-  display: inline-table;
-  margin-top: 320px;
-  margin-left: 55%;
-}
-.sidenav li{
-  list-style-type: none;
-}
-.sidenav li a{
-  color: #ffffff;
-  margin-top: 20px;
-  width: 500%;
-  height: 20px;
-  margin-left: 10px;
-  background-color: #000000;
-  opacity: 0.8;
-  border: 10px;
-  list-style-type: none;
-}
-.sidenav li a:hover{
-  background-color: #101310;
-  color: aliceblue;
-}
-div.content {
-  margin-left: 25%;
-  padding: 1px 16px;
-  height: 1000px;
+<audio id="shutter" src="shutter.mp3"></audio>
+
+<script>
+const slots = document.querySelectorAll(".slot");
+const startBtn = document.getElementById("start");
+const downloadBtn = document.getElementById("download");
+const resetBtn = document.getElementById("reset");
+const delaySel = document.getElementById("delay");
+const shutter = document.getElementById("shutter");
+
+let stream;
+
+/* CAMERA */
+async function startCamera(){
+  if(stream) return;
+  stream = await navigator.mediaDevices.getUserMedia({ video:true });
+
+  slots.forEach(s=>{
+    const v = s.querySelector("video");
+    v.srcObject = stream;
+  });
+
+  // tunggu kamera benar-benar siap
+  await new Promise(r=>setTimeout(r,500));
 }
 
-.h3navbar{
-  justify-content: flex-start;
-  align-items: self-start;
-  font-size: 24px;
-}
-.container-navbar{
-  width: 100%;
-}
-.ul-navbar{
-  background-color:#111;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  margin-right: 10%;
-  position: fixed;
-  opacity: 0.8;
-  z-index: 2;
-}
-.linavbar{
-  color: white;
-  list-style-type: none;
-  margin-right: 10%;
-}
-.button-container{
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  margin-left: 30%;
-  width: 40%;
-  justify-content: center;
-  border-radius: 20px;
-}
-.button-container:hover {
-  background-color: rgb(0, 255, 128);
-  transition: 1s;
-}
-.button-container2{
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    margin-left: 5%;
-    width: 40%;
-    justify-content: center;
-    border-radius: 20px;
-  }
-.button-container2:hover {
-    background-color: rgb(0, 255, 128);
-    transition: 1s;
-  }
-.radio{
-    color: #f2f2f2;
-    margin-left: 5%
-}
-.li-navbar{
-    color: rgb(255, 255, 255);
-    list-style-type: none;
-    transition: 2s;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.c-linavbar{
-  width: 100pc;
-}
-.c-anavbar{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.anavbar{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.li-navbar:hover{
-    background-color: #888181;
-    color: black;
+/* COUNTDOWN */
+function countdown(el){
+  return new Promise(res=>{
+    let c = 3;
+    el.textContent = c;
+    const i = setInterval(()=>{
+      c--;
+      if(c === 0){
+        clearInterval(i);
+        el.textContent = "";
+        res();
+      }else{
+        el.textContent = c;
+      }
+    },1000);
+  });
 }
 
+/* CAPTURE */
+function takePhoto(slot){
+  const v = slot.querySelector("video");
+  const c = slot.querySelector("canvas");
 
-.imagelogin{
-    width: 25%;
-    height: 25%;
-    margin-left: 37%;
-}
-.imagelogin2{
-    width: 25%;
-    height: 25%;
-    margin-left: 50%;
-    margin-top: 120px;
-}
-.h3-title{
-    color: rgb(255, 253, 253);
-    justify-content: first baseline;
-    align-items: center;
-    margin-left: 42%;
-    font-size: 25px;
-}
-.h3-title2{
-  color: rgb(255, 253, 253);
-  justify-content: first baseline;
-  align-items: center;
-  margin-left: 58%;
-  font-size: 25px;
-}
-::placeholder {
-    font-size: 18px; 
-    justify-content: center;
-  }
-.container{
-    padding: 16px;
-    list-style-type: none;
-}
-.container2{
-    padding: 16px;
-    list-style-type: none;
-    margin-top: -400px;
-}
-.tabel{
-    width: 40%;
-    margin-left: 30%;
-    padding-top: 20px;
-    font-size: 25px;
-}
-.tabel2{
-    width: 40%;
-    margin-left: 5%;
-    padding-top: 20px;
-    font-size: 25px;
-}
-.ul-container{
-    color: black;
-    justify-content: center;
-    align-items: center;
-}
-.li-container{
-    justify-content: center;
-    align-items: center;
+  if(v.videoWidth === 0) return;
+
+  c.width = v.videoWidth;
+  c.height = v.videoHeight;
+  c.getContext("2d").drawImage(v,0,0,c.width,c.height);
+
+  c.style.display="block";
+  v.style.display="none";
+
+  shutter.currentTime = 0;
+  shutter.play();
 }
 
-@media screen and (max-width: 576px){
-    .h3-title{
-        color: black;
-        justify-content: first baseline;
-        align-items: center;
-        margin-left: 35%;
-        font-size: 25px;
-    }
-    .tabel{
-        width: 70%;
-        margin-left: 17%;
-        padding-top: 20px;
-        font-size: 25px;
-    }
-    .imagelogin{
-        width: 35%;
-        height: 35%;
-        margin-left: 35%;
-    }
-}
-@media screen and (max-width: 300px){
-  .ul-navbar{
-      margin-right: 5%;
-      width: 100%;
-  }
-}
-@media screen and (max-width: 900px) {
-  ul.sidenav {
-    width: 100%;
-    height: auto;
-    position: relative;
+/* START */
+startBtn.onclick = async ()=>{
+  startBtn.disabled=true;
+  await startCamera();
+
+  for(const slot of slots){
+    await countdown(slot.querySelector(".count"));
+    takePhoto(slot);
+    await new Promise(r=>setTimeout(r,delaySel.value));
   }
 
-  ul.sidenav li a {
-    float: left;
-    padding: 15px;
-  }
+  downloadBtn.disabled=false;
+};
 
-  div.content {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 400px) {
-  ul.sidenav li a {
-    text-align: center;
-    float: none;
-  }
-}
-.activity-stream{
-    position: fixed;
-    z-index: 10;
-}
-.ruang{
-    margin-top: -410px;
-    margin-left: -65px;
-}
-        </style>
+/* RESET */
+resetBtn.onclick = ()=>{
+  slots.forEach(s=>{
+    s.querySelector("canvas").style.display="none";
+    s.querySelector("video").style.display="block";
+  });
+  startBtn.disabled=false;
+  downloadBtn.disabled=true;
+};
+
+/* ===== DOWNLOAD FIX FINAL (AMAN SEMUA BROWSER) ===== */
+downloadBtn.onclick = ()=>{
+  const img = new Image();
+  img.crossOrigin = "anonymous"; // 🔥 WAJIB
+  img.src = "frame.png";
+
+  img.onload = ()=>{
+    const out = document.createElement("canvas");
+    out.width = img.naturalWidth;
+    out.height = img.naturalHeight;
+    const ctx = out.getContext("2d");
+
+    ctx.drawImage(img,0,0);
+
+    const boxes = [
+      [0.06,0.223,0.88,0.189],
+      [0.06,0.493,0.88,0.189],
+      [0.06,0.763,0.88,0.189]
+    ];
+
+    slots.forEach((s,i)=>{
+      const c = s.querySelector("canvas");
+      if(!c.width) return;
+      const [x,y,w,h] = boxes[i];
+      ctx.drawImage(
+        c,
+        x*out.width,
+        y*out.height,
+        w*out.width,
+        h*out.height
+      );
+    });
+
+    out.toBlob(blob=>{
+      if(!blob) return;
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "photobooth_ITB2026.png";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      // revoke JANGAN langsung
+      setTimeout(()=>URL.revokeObjectURL(url),3000);
+
+      // Safari / iOS fallback
+      if(/iPhone|iPad/i.test(navigator.userAgent)){
+        window.open(url,"_blank");
+      }
+    },"image/png");
+  };
+};
+</script>
+
+</body>
+</html>
